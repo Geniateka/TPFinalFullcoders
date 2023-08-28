@@ -11,6 +11,11 @@ Algoritmo turnoProducto
 	producto1 <- ""
 	producto2 <- ""
 	producto3 <- ""
+	Escribir "+--------------------------------------------------------------------+"
+	Escribir "| Este pseudocódigo muestra el funcionamiento del sistema de reserva |"
+	escribir "| de turnos de una manera simple, así como ingreso de productos      |"
+	Escribir "| para dar una idea de las opciones del menú y datos de carga        |"
+	Escribir "+--------------------------------------------------------------------+"
 	
 	Repetir
 		Mostrar "1. Reservar turno"
@@ -19,10 +24,10 @@ Algoritmo turnoProducto
 		Leer opcionMenu
 		
 		Si opcionMenu = 1 Entonces
-			Mostrar "Seleccione el día para el turno (1: Lunes, 2: Martes):"
+			Mostrar "Seleccione el día para el turno (1: Lunes, 2: Martes):" // en versión final, todos los días de la semana
 			Leer diaElegido
 			
-			Mostrar "Seleccione la parte del día (1: Mañana, 2: Tarde):"
+			Mostrar "Seleccione la parte del día (1: Mañana, 2: Tarde):" // en versión final, rango de horarios
 			Leer parteDelDia
 			
 			Si diaElegido = 1 Y parteDelDia = 1 Entonces
@@ -60,7 +65,7 @@ Algoritmo turnoProducto
 			Fin Si
 		Fin si
 			Si opcionMenu = 2 Entonces
-				Mostrar "Ingrese el nombre del producto:"
+				Mostrar "Ingrese el nombre del producto:" // en versión final, se guarda en algún repositorio
 				Leer nombreProducto
 				
 				Si producto1 = "" Entonces
@@ -70,7 +75,7 @@ Algoritmo turnoProducto
 					Sino Si producto3 = "" Entonces
 							producto3 <- nombreProducto
 						Sino
-							Mostrar "Ya se han ingresado tres productos. No se pueden agregar más."
+							Mostrar "Ya se han ingresado tres productos. No se pueden agregar más." // en versión final, infinitos
 						Fin Si
 						
 					Fin Si
